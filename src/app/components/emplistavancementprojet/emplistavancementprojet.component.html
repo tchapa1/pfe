@@ -1,0 +1,69 @@
+
+
+<app-empheader></app-empheader>
+<app-empmenu></app-empmenu>
+
+<div class="container">
+  <button class="btn btn-lg btn-success" routerLink="/employeecreeravancementprojet/">create new</button>&nbsp;
+  <button class="btn btn-lg btn-info" (click)="openPDF()">Download PDF</button>&nbsp;
+
+</div>
+<br><hr>
+
+<div class="container">
+    <!-- No data message -->
+    <p *ngIf="avancementprojet.length <= 0" class="no-data text-center">There is no avancementprojet added yet!</p>
+    <!-- avancementprojet list -->
+    <table class="table table-bordered" *ngIf="avancementprojet.length > 0">
+      <thead class="table-success">
+        <tr>
+          <th scope="col">avancementprojet ID</th>
+          <th scope="col">titre</th>
+          <th scope="col">description</th>
+          <th scope="col">datecreation</th>
+          <th scope="col center">Update</th>
+<th scope="col center">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let avancementprojet of avancementprojet; let i = index">
+          <th scope="row">{{avancementprojet._id}}</th>
+          <td>{{avancementprojet.titre}}</td>
+          <td>{{avancementprojet.description}}</td>
+          <td>{{avancementprojet.datecreation}}</td>
+          <td class="text-center edit-block">
+            <span class="edit" [routerLink]="['/edit-avancementprojet/', avancementprojet._id]">
+              <button type="button" class="btn btn-success btn-lg">Edit</button>&nbsp;&nbsp;
+            </span>
+</td>
+<td>
+            <span class="delete" (click)="removeavancementprojet(avancementprojet, i)">
+              <button type="button" class="btn btn-danger btn-lg">Delete</button>&nbsp;&nbsp;
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+
+
+
+<app-empfooter></app-empfooter>
+
+
+
+
+
+
+
+
+
+
+
+
+

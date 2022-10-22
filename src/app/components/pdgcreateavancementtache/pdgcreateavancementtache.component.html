@@ -1,0 +1,75 @@
+
+
+<app-pdgheader></app-pdgheader>
+<app-pdgmenu></app-pdgmenu>
+
+
+
+
+
+<div class="row justify-content-center">
+    <div class="col-md-4 register-avancementtache">
+      <!-- form card register -->
+      <div class="card-body">
+        <form [formGroup]="avancementtacheForm" (ngSubmit)="onSubmit()">
+
+
+                    <div class="form-group col-md-6">
+
+            <label for="inputName">titre</label>
+            <input class="form-control" type="text" formControlName="titre" />
+            <!-- error -->
+          </div>
+                    <div class="form-group col-md-6">
+
+            <label for="inputName">description</label>
+            <input class="form-control" type="text" formControlName="description" />
+            <!-- error -->
+          </div>
+                    <div class="form-group col-md-6">
+
+            <label for="inputName">idtache</label>
+            <input class="form-control" type="text" formControlName="idtache" />
+            <!-- error -->
+          </div>
+
+                    <div class="form-group col-md-6">
+
+            <label for="inputName">datecreation</label>
+            <input class="form-control" type="date" formControlName="datecreation" />
+            <!-- error -->
+          </div>
+
+
+
+                    <div class="form-group col-md-6">
+
+            <button class="btn btn-success btn-lg btn-block" type="submit">
+              Valider
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- form card register -->
+  </div>
+
+
+
+
+
+
+<app-pdgfooter></app-pdgfooter>
+
+
+
+
+
+
+
+
+
+
+
+
+

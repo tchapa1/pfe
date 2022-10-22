@@ -1,0 +1,73 @@
+
+
+<app-pdgheader></app-pdgheader>
+<app-pdgmenu></app-pdgmenu>
+
+
+<div class="container">
+  <button class="btn btn-lg btn-success" routerLink="/pdgcreerprojet/">create new</button>&nbsp;
+  <button class="btn btn-lg btn-info" (click)="openPDF()">Download PDF</button>&nbsp;
+
+</div>
+<br><hr>
+
+<div class="container">
+    <!-- No data message -->
+    <p *ngIf="projet.length <= 0" class="no-data text-center">There is no projet added yet!</p>
+    <!-- projet list -->
+    <table class="table table-bordered" *ngIf="projet.length > 0">
+      <thead class="table-success">
+        <tr>
+          <th scope="col">projet ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">description</th>
+          <th scope="col">date creation</th>
+          <th scope="col">etat</th>
+          <th scope="col center">Update</th>
+<th scope="col center">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let projet of projet; let i = index">
+          <th scope="row">{{projet._id}}</th>
+          <td>{{projet.nom}}</td>
+          <td>{{projet.description}}</td>
+          <td>{{projet.datecreation}}</td>
+          <td>{{projet.etat}}</td>
+          <td class="text-center edit-block">
+            <span class="edit" [routerLink]="['/edit-projet/', projet._id]">
+              <button type="button" class="btn btn-success btn-lg">Edit</button>&nbsp;&nbsp;
+            </span>
+</td>
+<td>
+            <span class="delete" (click)="removeprojet(projet, i)">
+              <button type="button" class="btn btn-danger btn-lg">Delete</button>&nbsp;&nbsp;
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+
+
+
+
+<app-pdgfooter></app-pdgfooter>
+
+
+
+
+
+
+
+
+
+
+
+
+

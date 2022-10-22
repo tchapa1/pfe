@@ -1,0 +1,36 @@
+	
+
+ng g s service/apipdgprojet
+ng g s service/apipdgtache
+ng g s service/apipdgmessage
+ng g s service/apipdgnotif
+ng g s service/apipdgconge
+ng g s service/apipdgabsence
+ng g s service/apipdgemp
+ng g s service/apipdgadmin
+ng g s service/apipdgpdg
+ng g s service/apipdgchef
+ng g s service/apipdgavancementtache
+ng g s service/apipdgavancementprojet
+ng g s service/apipdggroupe
+
+
+
+	admin
+
+	chef
+
+	emp
+
+	pdg
+
+
+ng g s service/apipdg
+
+
+ng g s service/apipdg
+
+ng g s service/apipdg
+
+ng g s service/apipdg
+
